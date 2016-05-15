@@ -15,7 +15,6 @@
     ein ;; add ein package for ipython notebook
     jedi
     flycheck
-    material-theme
     py-autopep8
     exec-path-from-shell
     auto-complete
