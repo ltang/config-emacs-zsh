@@ -58,7 +58,7 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
-(elpy-use-ipython)
+;;(elpy-use-ipython)
 
 (add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'python-mode-hook 'hs-minor-mode)
