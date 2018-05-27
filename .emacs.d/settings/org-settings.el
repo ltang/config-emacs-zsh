@@ -5,11 +5,11 @@
 (require 'org)
 
 ;; (define-key global-map "\C-cl" 'org-store-link)
-;; (define-key global-map "\C-ca" 'org-agenda)
-;; (setq org-log-done t)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
 
 ;; list files to search for agenda
-;; (setq org-agenda-files (list "~/drive/tasks.org"))
+(setq org-agenda-files (list "~/Dropbox/notes"))
 
 
 ;; --------------------------------------------------------------------
