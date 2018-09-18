@@ -130,6 +130,22 @@
 (global-set-key "\M-w" 'clipboard-kill-ring-save)
 (global-set-key "\C-y" 'clipboard-yank)
 
+
+;;------------------------------------------------------------
+;; copy/paste across osx
+;;------------------------------------------------------------
+(defun copy-from-osx ()
+    (shell-command-to-string "pbpaste"))
+  
+(defun paste-to-osx (text &optional push)
+    (let ((process-connection-type nil))
+      (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+        (process-send-string proc text)
+        (process-send-eof proc))))
+  
+(setq interprogram-cut-function 'paste-to-osx)
+(setq interprogram-paste-function 'copy-from-osx)
+
 ;; comment/uncomment region
 (global-set-key (kbd "C-c :") 'uncomment-region)
 (global-set-key (kbd "C-c ;") 'comment-region)
