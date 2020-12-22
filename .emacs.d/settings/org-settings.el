@@ -11,6 +11,10 @@
 ;; list files to search for agenda
 (setq org-agenda-files (list "~/Dropbox/notes"))
 
+;; multi-state workflow for TODO
+(setq org-todo-keywords
+      '((sequence "TODO" "|" "DONE" "SKIP")))
+
 
 ;; --------------------------------------------------------------------
 ;; set up to convert org-mode into word processor
