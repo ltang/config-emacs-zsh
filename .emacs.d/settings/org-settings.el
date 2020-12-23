@@ -16,6 +16,25 @@
       '((sequence "TODO" "|" "DONE" "SKIP")))
 
 
+;; sort by time and then by TODO
+(defun org-sort-todo-deadine ()
+  "Group Org-mode entries by TODO keyword and sort alphabetically.
+
+This function achieves this by first sorting alphabetically and
+then sorting by TODO keyword. This works because the TODO-sort in
+`org-sort-entries' preserves the initial alphabetical sort."
+  (interactive)
+  ;; First sort by deadline & time
+  (org-sort-entries t ?d)
+  (org-sort-entries t ?t)
+  ;; Then sort by TODO keyword
+  (org-sort-entries t ?o)
+
+  ;; show outline mode
+  (org-global-cycle)
+  (org-global-cycle)
+  )
+
 ;; --------------------------------------------------------------------
 ;; set up to convert org-mode into word processor
 ;; http://www.howardism.org/Technical/Emacs/orgmode-wordprocessor.html
