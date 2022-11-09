@@ -11,11 +11,11 @@
 
 (defvar myPackages
   '(better-defaults
-    elpy
-    ein ;; add ein package for ipython notebook
+    ;; elpy
+    ;; ein ;; add ein package for ipython notebook
     jedi
     flycheck
-    py-autopep8
+    ;; py-autopep8
     exec-path-from-shell
     auto-complete
     org-bullets
